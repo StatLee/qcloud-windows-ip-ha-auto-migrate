@@ -27,9 +27,9 @@ action 对应接口的接口名，请参考产品文档上对应接口的接口�
 action = 'DescribeNetworkInterfaces'
 
 config = {
-    'Region': 'gz',
-    'secretId': 'XXXXX',
-    'secretKey': 'XXXXX',
+    'Region': '具体地域',
+    'secretId': 'SecreID',
+    'secretKey': 'secretKey',
     'method': 'get'
 }
 
@@ -47,18 +47,17 @@ try:
 
     # 请求前可以通过下面四个方法重新设置请求的secretId/secretKey/region/method参数
     # 重新设置请求的secretId
-    secretId = 'XXXX'
+    secretId = 'secretId'
     service.setSecretId(secretId)
     # 重新设置请求的secretKey
-    secretKey = 'XXXXX'
+    secretKey = 'secretKey'
     service.setSecretKey(secretKey)
     # 重新设置请求的region
-    region = 'gz'
+    region = '具体地域'
     service.setRegion(region)
     # 重新设置请求的method
     method = 'post'
     service.setRequestMethod(method)
-
     # 生成请求的URL，不发起请求
 #    print service.generateUrl(action, params)
     # 调用接口，发起请求

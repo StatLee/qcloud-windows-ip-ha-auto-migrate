@@ -56,3 +56,12 @@ if __name__ == '__main__':
         else:
             mvto2b=os.system('python2.6 VMCloud-Migrate-HAIP.py VPC网络的ID 需要检查的群集IP 第二个节点的网卡实例ID 第一个节点的网卡实例ID')
             os.system('echo 切换到SQL01 成功 >> /var/log/vmclog.log')
+    iportrs=NetPortCheck('192.168.108.219',1433)
+    if iportrs == 'NotOk':
+        nodename=GetCVMInstance('eni-4z33qfan')
+        if nodename == 'SQL01':
+            mvto2a=os.system('python2.6 VMCloud-Migrate-HAIP.py VPC网络的ID 需要检查的群集IP 第一个节点的网卡实例ID 第二个节点的网卡实例ID')
+            os.system('echo 佈~G彍¢佈°SQL02 彈~P佊~_ >> /var/log/vmclog.log')
+        else:
+            mvto2b=os.system('python2.6 VMCloud-Migrate-HAIP.py VPC网络的ID 需要检查的群集IP 第二个节点的网卡实例ID 第一个节点的网卡实例ID')
+            os.system('echo 佈~G彍¢佈°SQL01 彈~P佊~_ >> /var/log/vmclog.log')
