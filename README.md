@@ -1,4 +1,4 @@
-[在放置之前请先根据文档（正在补充），将相关公有参数修改为自身真实的参数]
+[在放置之前请先根据文档（https://www.qcloud.com/community/article/804074），将相关公有参数修改为自身真实的参数]
 
 [Before placing, modify the relevant public parameters to their own true parameters according to the document (in addition)]
 
